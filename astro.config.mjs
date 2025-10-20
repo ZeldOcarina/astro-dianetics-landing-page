@@ -6,9 +6,11 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-      plugins: [tailwindcss()]
-  },
+    site: "https://zeldocarina.github.io",
+    base: '/astro-dianetics-landing-page',
+    vite: {
+        plugins: [tailwindcss()]
+    },
 
-  integrations: [react()]
+    integrations: [react()]
 });
