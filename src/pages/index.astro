@@ -1,16 +1,30 @@
 ---
+import Banner from "../components/Banner.astro";
+import Navbar from "../layout/Navbar.astro";
+import Copy from "../components/Copy.astro";
+import Form from "../components/Form";
 
+import "../styles/global.css";
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Seminario di Dianetics</title>
+  </head>
+  <body class="container m-auto">
+    <Navbar />
+    <Banner />
+    <div class="grid grid-cols-2 gap-16 px-16 mt-16">
+      <div>
+        <Copy />
+        <Card />
+      </div>
+      <Form client:load />
+    </div>
+  </body>
 </html>
